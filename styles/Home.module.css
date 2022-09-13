@@ -1,0 +1,13 @@
+.main {
+  background-image: url("/app_bg.jpg");
+  height: 100vh;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.textInput {
+  width: 31.25em;
+  margin: 2em;
+}
