@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Config
+
+NEXT_PUBLIC_CONTRACT = 0x41F4ee20CE94C9F327F3ee5223FCAE982CDB9815
+
+replace this contract address with the one gotten from the deployed contract
+
 ## Getting Started
 
 First, run the development server:
