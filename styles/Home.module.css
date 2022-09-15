@@ -1,13 +1,46 @@
 .main {
   background-image: url("/app_bg.jpg");
-  height: 100vh;
+  height: 42em;
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 
+.hero {
+  height: 42em;
+}
+
 .textInput {
   width: 31.25em;
-  margin: 2em;
+  margin: 0.6em;
+}
+
+.submitBtn {
+  margin: 0.6em;
+  height: 4em;
+}
+
+.memoBg {
+  min-height: 42em;
+}
+
+.footer {
+  height: 4em;
+}
+
+.footer .content {
+  padding-top: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    height: 64em;
+  }
+  .hero {
+    height: 64em;
+  }
+  .cup {
+    display: none;
+  }
 }

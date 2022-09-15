@@ -5,6 +5,7 @@ import {
   DialogContent, DialogTitle 
 } from '@mui/material';
 import Slide from '@mui/material/Slide';
+import {  LoadingButton } from '@mui/lab';
 import { Close } from '@mui/icons-material';
 import styles from '../styles/Home.module.css'
 
@@ -17,13 +18,15 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function Modal(props) {
 
-  const { open, setOpen, isBig, buyCoffee, buyBigCoffee } = props
-  const [name, setName] = useState('');
-	const [message, setMessage] = useState('');
+  const { open, setOpen, isBig, buyCoffee, buyBigCoffee, message, name, setMessage, setName } = props
+
+  const [loading, setLoading] = React.useState(false)
 
   const handleClose = () => {
     setOpen(false);
   };
+
+  
 
   return (
     <Dialog
@@ -62,17 +65,19 @@ export default function Modal(props) {
               rows={6}
               />
 
-          <Button 
-            //sx={}
-            //onClick={isBig ? buyBigCoffee : buyCoffee}
+          <LoadingButton
+            className={styles.submitBtn}
+            onClick={() => isBig ? buyBigCoffee(setLoading) : buyCoffee(setLoading)}
+            loading={loading}
+            loadingIndicator={"Buying Coffee, Please Wait..."}
             variant="contained">
             { 
               isBig ? 
-                "Buy Me Big coffee for 0.005 ETH" 
+                "Buy Me Big coffee for 0.003 ETH" 
                   : 
                 "Buy Me coffee for 0.001 ETH" 
             } 
-          </Button>
+          </LoadingButton>
                 
         </FormControl>
               
