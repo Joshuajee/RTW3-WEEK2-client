@@ -35,10 +35,14 @@
 
 @media screen and (max-width: 600px) {
   .main {
-    height: 64em;
+    height: 44em;
   }
   .hero {
     height: 64em;
+  }
+
+  .cup {
+    display: none;
   }
 
 }
